@@ -57,4 +57,7 @@ public class LinkedList {
         return output;
     }
 
+    public Node getHead() {
+        return head;
+    }
 }
