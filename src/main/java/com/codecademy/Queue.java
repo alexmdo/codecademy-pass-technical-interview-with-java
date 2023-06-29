@@ -2,10 +2,10 @@ package com.codecademy;
 
 public class Queue {
 
-    private static final int DEFAULT_MAX_SIZE = Integer.MAX_VALUE;
-    private final int maxSize;
     private final LinkedList queue;
     private int size;
+    private static final int DEFAULT_MAX_SIZE = Integer.MAX_VALUE;
+    private final int maxSize;
 
     public Queue() {
         this(DEFAULT_MAX_SIZE);
@@ -52,6 +52,10 @@ public class Queue {
         return this.size < this.maxSize;
     }
 
+    private String printQueue() {
+        return this.queue.printList();
+    }
+
     public static void main(String[] args) {
         var queueSize = 10;
         var q = new Queue(queueSize);
@@ -69,10 +73,6 @@ public class Queue {
         for (int i = 0; i < queueSize; i++) {
             q.dequeue();
         }
-    }
-
-    private String printQueue() {
-        return this.queue.printList();
     }
 
 }
