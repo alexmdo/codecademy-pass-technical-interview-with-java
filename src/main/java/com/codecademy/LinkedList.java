@@ -60,4 +60,14 @@ public class LinkedList {
     public Node getHead() {
         return head;
     }
+
+    public void addToHead(String key, String value) {
+        var newHead = new Node(key, value);
+        var currentHead = this.head;
+        this.head = newHead;
+
+        if (currentHead != null) {
+            this.head.setNext(currentHead);
+        }
+    }
 }

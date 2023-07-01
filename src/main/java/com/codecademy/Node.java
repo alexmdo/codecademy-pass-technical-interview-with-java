@@ -2,9 +2,16 @@ package com.codecademy;
 
 public class Node {
 
-    private final String data;
+    private String key;
+    private String data;
     private Node next;
     private Node previous;
+
+    public Node(String key, String data) {
+        this.key = key;
+        this.data = data;
+        this.next = null;
+    }
 
     public Node(String data) {
         this.data = data;
@@ -28,5 +35,14 @@ public class Node {
 
     public void setPrevious(Node previous) {
         this.previous = previous;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKeyValue(String key, String data) {
+        this.key = key;
+        this.data = data;
     }
 }
